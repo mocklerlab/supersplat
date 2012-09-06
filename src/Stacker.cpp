@@ -114,7 +114,7 @@ bool Stacker::stackSplatOutput(std::string p_sSplatOutputFileName) {
 		std::vector<SplatResultInfo>* l_dSRIs = &(l_dReadSJHashIterator->second);
 		std::vector<SplatResultInfo>::const_iterator l_dSRIsIterator = l_dSRIs->begin();
 		SplatResultInfo l_dBestSRI;
-		l_iHighScore = 0.0;
+		float l_iHighScore = 0.0;
 		while(l_dSRIsIterator != l_dSRIs->end()) {
 			float l_iScore = 0.0;
 			float l_fLeftChunkLength, l_fRightChunkLength, l_fFlankLengthRatio;
