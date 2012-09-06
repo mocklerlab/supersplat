@@ -114,8 +114,9 @@ bool Stacker::stackSplatOutput(std::string p_sSplatOutputFileName) {
 		std::vector<SplatResultInfo>* l_dSRIs = &(l_dReadSJHashIterator->second);
 		std::vector<SplatResultInfo>::const_iterator l_dSRIsIterator = l_dSRIs->begin();
 		SplatResultInfo l_dBestSRI;
+		l_iHighScore = 0.0;
 		while(l_dSRIsIterator != l_dSRIs->end()) {
-			float l_iScore = 0.0, l_iHighScore = 0.0;
+			float l_iScore = 0.0;
 			float l_fLeftChunkLength, l_fRightChunkLength, l_fFlankLengthRatio;
 			if(l_dSRIsIterator->FlankingDinucleotides == "GT-AG" || l_dSRIsIterator->FlankingDinucleotides == "CT-AC") l_iScore += 20;
 			else if(l_dSRIsIterator->FlankingDinucleotides == "GC-AG" || l_dSRIsIterator->FlankingDinucleotides == "CT-GC") l_iScore += 7;
